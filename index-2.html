@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>@Rohit_kalgutkar_ · Links</title>
+<style>
+:root{--bg:#f6f4ff;--bg2:#e6f0ff;--card:rgba(255,255,255,.7);--text:#17172b;--muted:#5d5d78;--line:rgba(80,70,160,.18);--a:#6c4cff;--b:#ff4fa3;--shadow:0 10px 30px rgba(90,70,200,.15);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0b1e;--bg2:#171236;--card:rgba(255,255,255,.07);--text:#f2f0ff;--muted:#a9a6c9;--line:rgba(255,255,255,.14);--shadow:0 10px 30px rgba(0,0,0,.45)}}
+:root[data-theme="dark"]{--bg:#0d0b1e;--bg2:#171236;--card:rgba(255,255,255,.07);--text:#f2f0ff;--muted:#a9a6c9;--line:rgba(255,255,255,.14);--shadow:0 10px 30px rgba(0,0,0,.45)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text);background:radial-gradient(900px 500px at 10% -10%,var(--bg2),transparent),radial-gradient(800px 500px at 100% 110%,rgba(255,79,163,.18),transparent),var(--bg);transition:background .4s,color .4s;overflow-x:hidden}
+.orb{position:fixed;border-radius:50%;filter:blur(70px);opacity:.45;z-index:0;animation:float 14s ease-in-out infinite}
+.o1{width:260px;height:260px;background:var(--a);top:-60px;left:-60px}
+.o2{width:220px;height:220px;background:var(--b);bottom:-60px;right:-40px;animation-delay:-6s}
+@keyframes float{50%{transform:translate(30px,40px)}}
+.wrap{position:relative;z-index:1;max-width:520px;margin:0 auto;padding:28px 18px 48px}
+.top{display:flex;justify-content:flex-end}
+.toggle{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:8px 14px;font-size:14px;cursor:pointer;backdrop-filter:blur(10px);display:flex;gap:8px;align-items:center}
+.toggle:hover{transform:scale(1.04)}
+.hero{text-align:center;margin:10px 0 26px}
+.ring{width:112px;height:112px;margin:0 auto 14px;padding:4px;border-radius:50%;background:conic-gradient(var(--a),var(--b),var(--a));animation:spin 8s linear infinite}
+.ring div{width:100%;height:100%;border-radius:50%;background:var(--bg);display:grid;place-items:center;font-size:42px;font-weight:800;color:var(--a);animation:spin 8s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+h1{margin:0;font-size:22px;letter-spacing:.2px}
+.tag{color:var(--muted);margin:6px 0 0;font-size:14px}
+.links{display:flex;flex-direction:column;gap:12px}
+.link{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;text-decoration:none;color:var(--text);background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(12px);transition:transform .2s,border-color .2s;opacity:0;animation:rise .6s forwards}
+.link:hover{transform:translateY(-3px) scale(1.015);border-color:var(--a)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:20px;color:#fff;background:linear-gradient(135deg,var(--a),var(--b));flex:none}
+.name{font-weight:650;flex:1}
+.name small{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px}
+.arrow{color:var(--muted)}
+.badge{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);margin-left:6px}
+.stats{margin-top:28px;display:flex;justify-content:center}
+.pill{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:10px 18px;font-size:14px;display:flex;gap:10px;align-items:center;backdrop-filter:blur(10px)}
+.dot{width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 0 rgba(46,204,113,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(46,204,113,0)}}
+.num{font-weight:800;font-variant-numeric:tabular-nums;color:var(--a)}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:22px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important}}
+</style>
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div>
+<main class="wrap">
+  <div class="top"><button class="toggle" id="theme" aria-label="Toggle light and dark mode"><span id="ti">🌙</span><span id="tt">Dark</span></button></div>
+  <section class="hero">
+    <div class="ring"><div>R</div></div>
+    <h1>@Rohit_kalgutkar_</h1>
+    <p class="tag">Find me everywhere ✨</p>
+  </section>
+  <nav class="links" id="links"></nav>
+  <div class="stats">
+    <div class="pill"><span class="dot"></span><span>👀 <span class="num" id="count">…</span> <span id="clabel">visits</span></span></div>
+  </div>
+  <footer>Made by Rohit Kalgutkar</footer>
+</main>
+<script>
+var LINKS=[
+ {n:"Instagram",i:"📸",u:"https://instagram.com/rohit_kalgutkar_"},
+ {n:"GitHub",i:"💻",u:"https://github.com/Rohitkalgutkar1"},
+ {n:"Threads",i:"🧵",u:"https://www.threads.net/@rohit_kalgutkar_",b:"Inactive"},
+ {n:"My playlist",i:"🎧",u:"https://open.spotify.com/playlist/5zr8tb56ipjGr2Py3djQjZ?si=wOvVnaXpRDSaJVa2DAEnSQ"},
+ {n:"Facebook",i:"👍",u:"https://www.facebook.com/share/1QUNVYqqbp/",b:"Inactive"},
+ {n:"HALUNA",i:"🎵",u:"https://open.spotify.com/artist/0JB4i9bhEANaZv1c3i3oYq?si=XasFWqCRT9m3SmaK_a9DJA"},
+ {n:"Telegram",i:"✈️",u:"https://t.me/Rohit7393"},
+ {n:"X (Twitter)",i:"🐦",u:"https://x.com/Rohit_Kalgutkar"}
+];
+var box=document.getElementById("links");
+LINKS.forEach(function(l,k){
+  var a=document.createElement("a");a.className="link";a.href=l.u;a.style.animationDelay=(k*70)+"ms";
+  if(l.u!=="#"){a.target="_blank";a.rel="noopener noreferrer"}
+  var ic=document.createElement("div");ic.className="ico";ic.textContent=l.i;
+  var nm=document.createElement("div");nm.className="name";nm.textContent=l.n;
+  if(l.b){var b=document.createElement("span");b.className="badge";b.textContent=l.b;nm.appendChild(b)}
+  var ar=document.createElement("div");ar.className="arrow";ar.textContent="↗";
+  a.appendChild(ic);a.appendChild(nm);a.appendChild(ar);box.appendChild(a);
+});
+
+/* theme */
+var root=document.documentElement;
+function curTheme(){var t=root.getAttribute("data-theme");if(t)return t;return matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+function paint(){var d=curTheme()==="dark";document.getElementById("ti").textContent=d?"☀️":"🌙";document.getElementById("tt").textContent=d?"Light":"Dark"}
+try{var s=localStorage.getItem("rk-theme");if(s)root.setAttribute("data-theme",s)}catch(e){}
+paint();
+document.getElementById("theme").onclick=function(){
+  var n=curTheme()==="dark"?"light":"dark";root.setAttribute("data-theme",n);
+  try{localStorage.setItem("rk-theme",n)}catch(e){}paint();
+};
+
+/* visitor counter: per-device count first, shared count lights up when available */
+var el=document.getElementById("count"),lab=document.getElementById("clabel");
+var mine=1;
+try{mine=(parseInt(localStorage.getItem("rk-visits"),10)||0)+1;
+  if(!sessionStorage.getItem("rk-seen")){localStorage.setItem("rk-visits",String(mine));sessionStorage.setItem("rk-seen","1")}else{mine=Math.max(1,mine-1)}}catch(e){}
+el.textContent=mine;lab.textContent=mine===1?"visit from this device":"visits from this device";
+
+(async function(){
+  try{
+    if(!window.claude)return;
+    var db=await claude.use("db"),user=await claude.use("user");
+    if(!db||!user)return;
+    var id=await user.id();
+    var col=db.collection("visitors");
+    try{await col.doc(id).set({last:Date.now()})}catch(e){}
+    col.onSnapshot(function(snap){
+      var n=snap.size!=null?snap.size:(snap.docs?snap.docs.length:0);
+      if(n>0){el.textContent=n;lab.textContent=n===1?"unique visitor":"unique visitors"}
+    });
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
